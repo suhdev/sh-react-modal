@@ -1,0 +1,98 @@
+.sh-react-modal, .sh-react-modal .sh-react-backdrop, .sh-react-modal .modal-backdrop, .sh-react-modal .modal-content-container, .sh-react-modal .modal-content, .sh-react-modal .modal-close-button, .sh-react-modal .modal-title-bar, .sh-react-modal .modal-title-wrapper, .sh-react-modal .modal-buttons-wrapper, .sh-react-modal .modal-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.sh-react-modal .modal-title-bar:before, .sh-react-modal .modal-buttons-wrapper:before, .sh-react-modal .modal-title-bar:after, .sh-react-modal .modal-buttons-wrapper:after {
+  content: ' ';
+  display: block;
+  clear: both; }
+
+.sh-react-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: none;
+  height: 100%;
+  z-index: 444;
+  font-family: sans-serif;
+  overflow: auto; }
+  .sh-react-modal .sh-react-backdrop, .sh-react-modal .modal-backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer; }
+  .sh-react-modal .modal-content-container {
+    position: absolute;
+    padding: 0px 0px 40px;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    background: white;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%); }
+  .sh-react-modal .modal-content {
+    padding: 20px 40px; }
+  .sh-react-modal .modal-close-button {
+    position: relative;
+    float: right;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    cursor: pointer; }
+  .sh-react-modal .modal-title-bar {
+    cursor: pointer;
+    position: relative;
+    line-height: 1.2em;
+    background-color: #ccc;
+    color: #333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+  .sh-react-modal .modal-title-wrapper {
+    cursor: pointer;
+    position: relative;
+    padding: 0.4em 0.2em;
+    width: calc(100% - 2em);
+    float: left; }
+  .sh-react-modal .modal-buttons-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 0.3em;
+    width: 100%;
+    background-color: #eee; }
+  .sh-react-modal .modal-button {
+    display: block;
+    float: right;
+    margin-left: 10px;
+    min-width: 5em;
+    text-align: center;
+    background-color: transparent;
+    color: #333;
+    padding: 0.3em 0.6em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid #444;
+    cursor: pointer; }
+    .sh-react-modal .modal-button:hover {
+      background-color: #a2a2a2;
+      color: white; }
+  .sh-react-modal[data-visible="true"] {
+    display: block; }
+  .sh-react-modal[data-hasclose="false"] .modal-content-container .modal-close-button {
+    display: none; }

@@ -1,0 +1,159 @@
+$sh-react-modal-backdrop-bg:rgba(0,0,0,0.3) !default; 
+$sh-react-modal-content-padding:0px 0px 40px !default; 
+$sh-react-modal-content-bg:white !default;
+$sh-react-modal-content-fg:#444 !default;
+$sh-react-modal-font-family:sans-serif !default; 
+$sh-react-modal-buttons-wrapper-bg:#eee !default;
+$sh-react-modal-buttons-wrapper-padding:0.3em !default;
+$sh-react-modal-button-bg:transparent !default;
+$sh-react-modal-button-fg:#333 !default; 
+$sh-react-modal-button-hover-bg:darken($sh-react-modal-buttons-wrapper-bg,30%) !default; 
+$sh-react-modal-button-hover-fg:white !default;
+$sh-react-modal-button-font-size:12px !default;
+$sh-react-modal-title-bar-bg:#ccc !default;
+$sh-react-modal-title-bar-fg:#333 !default;
+
+%box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+%clearfix{
+    &:before,&:after{
+        content:' ';
+        display:block;
+        clear:both;
+    }
+}
+.sh-react-modal{
+    @extend %box;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    display:none;
+    height:100%;
+    z-index:444;
+    font-family:$sh-react-modal-font-family;
+    overflow:auto;
+
+    
+
+    .sh-react-backdrop,.modal-backdrop{
+        @extend %box;
+        position:fixed;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        background-color: $sh-react-modal-backdrop-bg;
+        cursor:pointer;
+    }
+
+    
+
+    .modal-content-container{
+        @extend %box;
+        position: absolute;
+        padding:$sh-react-modal-content-padding;
+        top:50%;
+        left:50%; 
+        width:50%;
+        background:$sh-react-modal-content-bg;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        -o-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+        
+
+    }
+
+    .modal-content {
+        @extend %box;
+        padding:20px 40px;
+    }
+    .modal-close-button{
+        @extend %box;
+        position:relative;
+        float:right;
+        height:2em;
+        width:2em;
+        line-height:2em;
+        text-align:center;
+        cursor:pointer;
+    }
+
+    .modal-title-bar{
+        @extend %box;
+        @extend %clearfix;
+        cursor:pointer;
+        position:relative;
+        line-height:1.2em;
+        background-color: $sh-react-modal-title-bar-bg;
+        color:$sh-react-modal-title-bar-fg;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    .modal-title-wrapper{
+        @extend %box;
+        cursor:pointer;
+        position:relative;
+        padding:0.4em 0.2em;
+        width:calc(100% - 2em);
+        float:left;
+    }
+
+    .modal-buttons-wrapper{
+        @extend %box;
+        @extend %clearfix;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        padding:$sh-react-modal-buttons-wrapper-padding;
+        width:100%;
+        background-color: $sh-react-modal-buttons-wrapper-bg;
+    }
+
+    .modal-button{
+        @extend %box;
+        display:block;
+        float:right;
+        margin-left:10px;
+        min-width:5em;
+        text-align:center;
+        background-color:$sh-react-modal-button-bg;
+        color:$sh-react-modal-button-fg; 
+        padding:0.3em 0.6em;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px;
+        font-size:$sh-react-modal-button-font-size;
+        text-transform: uppercase;
+        border:1px solid #444;
+        cursor:pointer;
+
+        &:hover{
+            background-color:$sh-react-modal-button-hover-bg;
+            color:$sh-react-modal-button-hover-fg; 
+        }
+    }
+
+    &[data-visible="true"]{
+        display:block;
+    }
+
+    &[data-hasclose="false"]{
+        .modal-content-container{
+            .modal-close-button{
+                display:none;
+            }
+        }
+    }
+}

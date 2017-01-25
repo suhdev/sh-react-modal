@@ -1,0 +1,37 @@
+{
+  "name": "sh-react-modal",
+  "version": "1.0.0",
+  "description": "A configurable modal component for ReactJS applications written in TypeScript. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhdev/sh-react-modal.git"
+  },
+  "keywords": [
+    "Modal",
+    "ReactJS",
+    "TypeScript",
+    "Promise."
+  ],
+  "author": "Suhail Abood <suhail.abood@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhdev/sh-react-modal/issues"
+  },
+  "homepage": "https://github.com/suhdev/sh-react-modal#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-webpack": "^1.5.0",
+    "ts-loader": "^1.3.3",
+    "typings": "^2.1.0"
+  }
+}
