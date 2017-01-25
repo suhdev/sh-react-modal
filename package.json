@@ -1,8 +1,9 @@
 {
   "name": "sh-react-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A configurable modal component for ReactJS applications written in TypeScript. ",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "jsnext:main":"es6/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

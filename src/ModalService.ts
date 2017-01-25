@@ -1,6 +1,7 @@
 import * as React from 'react'; 
 import * as ReactDOM from 'react-dom';
-import * as Promise from 'bluebird'; 
+// import * as Promise from 'bluebird'; 
+declare var Promise:any; 
 import {Modal,ModalProps} from './Modal';
 
 export interface ModalService{
